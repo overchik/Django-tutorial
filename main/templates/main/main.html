@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0-11/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.15.0/umd/popper.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    
+    <title>Main Page</title>
+   
+</head>
+<body>
+   <nav class="navbar navbar-expand-lg navbar-default fixed-top bg-dark" >
+        <div class="container-fluid" >
+            <div class="navbar-header">
+                <a href="http://127.0.0.1:8000/" class="navbar-brand">Django</a>
+            </div>
+          
+            <div class="collapse navbar-collapse" id="navbarToggleExternalContent">
+                <ul class="navbar-nav mr-auto">
+                    <li class="active"><a href="http://127.0.0.1:8000/" class="nav-link">Main</a></li>
+                    <li><a href="http://127.0.0.1:8000/news" class="nav-link">News</a></li>
+                </ul>
+            </div>
+            <div class="basket-div fixed-position">
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+    
+    <div class="container-fluid" style="margin-top: 60px;">
+        <div class="col-md-8 offset-md-2" style="height: 900px; background-color: #7286f7;">
+            {% block content %}
+            <h1 style="text-align: center;">This is main Page</h1>
+            {% endblock %}
+        </div>
+    </div>
+
+</body>
+</html>
