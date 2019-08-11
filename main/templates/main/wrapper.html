@@ -13,6 +13,8 @@
 
     {% load static %}
     <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}" type="text/css">
+    <link rel="stylesheet" href="{% static 'css/mystyles.css' %}" type="text/css">
+    
    
    
 </head>
@@ -41,9 +43,14 @@
         <div class="col-md-8 offset-md-2" style="height: 900px; background-color: #7286f7;">
             {% block content %}
                 <h1 style="text-align: center;">This is main Page</h1>
+                <img src="{% static 'main/images/djtut.jpg'%}" alt="django-tutorial" class="col-md-4 offset-md-4">
             {% endblock content%}
+            {% include 'main/includes/button_on_main_page.html' %}
+        
         </div>
+        
     </div>
+    
 
 </body>
 </html>
